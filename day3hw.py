@@ -19,7 +19,25 @@ fahren = list(map(anon_func, places_temps))
 print(fahren)
 
 # Exercise #4
+# Worked on a more direction-specific solution with Justin 
 # Write recursive function that returns fibonacci sequence up to the number passed in
+fib_set = set()
+def recursive_fib(n):
+    if n <= 0:
+        print("Sorry, the Fibonacci sequence starts at 1.")
+    elif n == 1 or n == 2:
+        fib_set.add(1)
+        return 1
+    else:
+        new_fib_num = recursive_fib(n-1) + recursive_fib(n-2)
+        fib_set.add(new_fib_num)
+        return new_fib_num
+recursive_fib(9)
+fib_list = sorted(list(fib_set))
+fib_list.insert(0, 1)
+print(fib_list)
+
+# First draft Fib recursive function that returns only the last value in the Fibonacci sequence. Works, but not following the instructions totally
 def recursive_fib(n):
     if n <= 0:
         print("Sorry, the Fibonacci sequence starts at 1.")
@@ -28,8 +46,6 @@ def recursive_fib(n):
     else:
         return recursive_fib(n-1) + recursive_fib(n-2)
 print(recursive_fib(9))
-
-
 
 
 
