@@ -7,3 +7,8 @@ print(find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJun
 def digitize(n):
     return list(map(int, str(n)))[::-1]
 print(digitize(345))
+
+# Vowel remover
+def shortcut(s):
+    return str(''.join([l for l in s if l not in "aeiou"]))
+print(shortcut("hello"))
