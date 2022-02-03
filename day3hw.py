@@ -21,11 +21,13 @@ print(fahren)
 # Exercise #4
 # Write recursive function that returns fibonacci sequence up to the number passed in
 def recursive_fib(n):
-    fib_list = [1]
-    run = 0
-    
-
-print(recursive_fib(5))
+    if n <= 0:
+        print("Sorry, the Fibonacci sequence starts at 1.")
+    elif n == 1 or n == 2:
+        return 1
+    else:
+        return recursive_fib(n-1) + recursive_fib(n-2)
+print(recursive_fib(9))
 
 
 
